@@ -4,7 +4,7 @@
 堆指针在被delete的时候只是表示该内存可以被回收，但是内存具体什么时候将会被回收将由操作系统决定。
 ```
 
-![image-20230129230008480](/Users/yxy/workspace/MyNotes/imgs/浅拷贝.png)
+![image-20230129230008480](./imgs/浅拷贝.png)
 
 ```bash
 delete函数的析构顺序：
@@ -14,13 +14,13 @@ delete函数的析构顺序：
 所以你看在delete执行之后cathy那块内存区域里面的string也是调用了stl里面的析构成为了空字符串
 ```
 
-![image-20230129230852580](/Users/yxy/workspace/MyNotes/imgs/析构.png)
+![image-20230129230852580](./imgs/析构.png)
 
 ```bash
 所以你看被释放的指针后面还是可以继续操作对应的内存区域，为了避免这种情况，delete和置空/重赋值一起用 来保证避免上面的问题
 ```
 
-![image-20230129231549399](/Users/yxy/workspace/MyNotes/imgs/res.png)
+![image-20230129231549399](./imgs/res.png)
 
 
 
